@@ -1,0 +1,41 @@
+# success run
+
+python3 main.py --files tests_data/correct/stats1.csv --report clickbait
+
+python3 main.py --files tests_data/correct/stats2.csv --report clickbait
+
+python3 main.py --files tests_data/correct/stats1.csv tests_data/correct/stats2.csv  --report clickbait
+
+# with error run
+
+# args invalid
+
+python3 main.py
+
+python3 main.py --files tests_data/correct/stats1.csv
+
+python3 main.py --report clickbait
+
+python3 main.py --files tests_data/correct/stats1.csv --report unknown
+
+python3 main.py --files __some_file__ --report clickbait
+
+python3 main.py --files tests_data/correct/stats1.csv --report clickbait --unknownparam some
+
+# files content invalid
+
+python3 main.py --files tests_data/invalid_header1.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_header2.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_header3.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_value1.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_value2.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_value3.csv tests_data/correct/stats1.csv  --report clickbait
+
+python3 main.py --files tests_data/invalid_value4.csv tests_data/correct/stats1.csv  --report clickbait
+
+
